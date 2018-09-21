@@ -143,3 +143,44 @@ li img {
     margin-left: 17.5%;
 }
 
+/* LAYOUT CHANGE */
+/* changing layout for channels and chat area */
+
+#channels {
+	position: absolute;
+	left: 0px;
+	right:60%;
+	top: 0px;
+    bottom: 0px;
+}
+#chat {
+	position: absolute;
+	right: 0px;
+	left:40%;
+	top: 0px;
+    bottom: 0px;
+}
+
+/* working on app bars according to the guidelines */
+#chat h1, #channels h1 {
+	background-color: #3F51B5;
+    color: white;
+	height: 56px;
+	font-family: 'Roboto', 'Arial', sans-serif;
+	font-size: 1.2em;
+	font-weight: normal;
+    letter-spacing: -0.5px;
+	line-height: 56px;
+	padding-left: 32px;
+}
+/* changing style for the moocus icon */
+#channels h1 img{
+    position: absolute;
+	left: 16px;
+	top: 6px;
+}
+#channels h1 span{
+	vertical-align: top;
+	margin-left: 8px;
+	padding: 32px;
+}
