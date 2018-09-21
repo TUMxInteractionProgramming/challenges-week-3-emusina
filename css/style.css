@@ -41,6 +41,8 @@ ul {
     background-color: white;
     /* #3 #channels #bullets removed */
     list-style-type: none;
+    /* add scroll to channels */
+    overflow-y: scroll;
 }
 
 li {
@@ -63,15 +65,27 @@ li img {
     /* #4 #middle vertical alignment of icons in the #channels list */
     vertical-align: middle;
 }
+/* channel list icons - changing positioning */
+.channel-meta {
+    position: absolute;
+    right:32px;
+    vertical-align:middle;
+}
 
 /* TAB BAR */
 
 /* #4 #sweat #tab-bar */
-#tab-bar {
+#tab-bar{
     /* #3 #tab-bar #container should be white */
     background-color: white;
     /* #3 #tab-bar #container has all buttons centered */
     text-align: center;
+    /* bottom-aligning the tab-bar */
+    position: absolute;
+    bottom: 0;
+    /* adding flex style to parent of buttons / tab-bar*/
+    display:flex; 
+    
 }
 
 /* #4 add styles to #tab-bar #buttons */
@@ -84,6 +98,9 @@ li img {
     width: 33%;
     height: 72px;
     padding: 16px;
+    
+    /* adding flex to buttons from tab-bar */
+    flex: 1;
 }
 
 /* #4 #tab-bar buttons do have a #line-break and images are centered due to the left&right auto margin */
@@ -110,11 +127,16 @@ li img {
 
     /* #4 #message distance to next message container*/
     margin-bottom: 8px;
+    
 }
 
 
 .message h3 {
     font-size: medium;
+    /* apply flexbox style */
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
 }
 
 .message h3 em {
@@ -130,12 +152,17 @@ li img {
 .message p {
     background-color: white;
     padding: 16px;
+    position: relative;
 }
 
 .message button {
     background-color: #CDDC39;
     color: black;
     text-transform: uppercase;
+    /* adding 8px bottom and right to the 5min buttons */
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
 }
 
 /* #4 left align own #messages using #margins */
@@ -152,6 +179,7 @@ li img {
 	right:60%;
 	top: 0px;
     bottom: 0px;
+    background-color: white;
 }
 #chat {
 	position: absolute;
@@ -159,6 +187,7 @@ li img {
 	left:40%;
 	top: 0px;
     bottom: 0px;
+    overflow-y: scroll;
 }
 
 /* working on app bars according to the guidelines */
@@ -183,4 +212,13 @@ li img {
 	vertical-align: top;
 	margin-left: 8px;
 	padding: 32px;
+}
+
+/* style for chat-bar */
+#chat-bar{
+    background-color: white;
+    border: 1px solid black;
+    font-size: 28px;
+    text-align: left;
+    overflow-y: scroll;
 }
